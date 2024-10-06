@@ -9,6 +9,7 @@ import Foundation
 
 
 // let untuk konstantan
+
 // var jika nilainya berubah
 
 // jika terdapat suggest error "expressions are not allowed at the top level" ini karena fungsi/kode dijalankan tidak dengan konteks/maksudnya, jika hanya untuk latihan lebih baik termina / playground jalankan kode yang hanya swift saja
