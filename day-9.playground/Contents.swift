@@ -264,11 +264,30 @@ func learnSwift(using approach: () -> Void) {
 learnSwift(using: learnWithUnwrap)
 
 
-func phoneFriend(conversation: () -> Void) {
-    print("Calling 555-1234...")
-    conversation()
+//func phoneFriend(conversation: () -> Void) {
+//    print("Calling 555-1234...")
+//    conversation()
+//}
+//phoneFriend:
+//    print("Hello!")
+//    print("A foreign prince wants to give you $5 million.")
+//    print("What are your bank details?")
+
+let luckyNumbers = [7, 4, 38, 21, 16, 15, 12, 33, 31, 49]
+
+
+let oddLuckyNumbers = luckyNumbers.filter { $0 % 2 != 0 }
+
+// Step 2: Sort the array in ascending order
+let sortedOddLuckyNumbers = oddLuckyNumbers.sorted()
+
+// Step 3: Map to strings in the desired format
+let luckyNumberStrings = sortedOddLuckyNumbers.map { "\($0) is a lucky number" }
+
+// Step 4: Print each resulting string, one item per line
+for luckyNumber in luckyNumberStrings {
+    print(luckyNumber)
 }
-phoneFriend:
-    print("Hello!")
-    print("A foreign prince wants to give you $5 million.")
-    print("What are your bank details?")
+
+
+
