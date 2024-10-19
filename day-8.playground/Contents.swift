@@ -136,3 +136,47 @@ do {
 
 //let result = try! checkPassword("12345")
 //print(result)
+
+var stack : [Character] = ["}"]
+
+stack.removeLast() != "{"
+
+
+
+func isValid(_ s: String) -> Bool {
+       guard s.count % 2 == 0 else {return false}
+
+       var stack : [Character] = []
+
+       for (index, item) in s.enumerated() {
+           print("stack loop \(index): \(stack)")
+           switch item {
+               case "{": stack.append("}")
+               case "(": stack.append(")")
+               case "[": stack.append("]")
+               default:
+                   if stack.isEmpty || stack.removeLast() != item {
+                       return false
+                   }
+           }
+           
+       }
+
+       return true
+   }
+
+
+print(isValid("[{}}"))
+
+
+var finalArray = [1,2,3]
+finalArray.sort()
+
+
+func mergeTwoLists(_ list1: ListNode?, _ list2: ListNode?) -> ListNode? {
+        var finalArray = list1!.val + list2!.val
+        print(finalArray)
+        return finalArray.sorted()
+    }
+
+
